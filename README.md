@@ -4,7 +4,7 @@ Follow the instructions in the "FFI Annual Report Data Compilation" SOP
 
 # Project Directory Description
 
--   `Raw_Data/` folder should contain the six raw CSV files
+-   `Raw_Data/` folder should eventually contain the seven raw CSV files
 
     -   "fao_sua_YEAR.csv"
     -   "fao_foodbalance_YEAR.csv"
@@ -12,15 +12,16 @@ Follow the instructions in the "FFI Annual Report Data Compilation" SOP
     -   "nonfao_maize_YEAR.csv"
     -   "nonfao_rice_YEAR.csv"
     -   "country_names.csv"
+    -   "percent_ip_urban_YEAR.csv"
 
--   `Cleaned_Data/` folder contains the four cleaned RDS files
+-   `Cleaned_Data/` folder should eventually contain the four cleaned RDS files
 
     -   "fao_sua_YEAR.rds"
     -   "fao_foodbalance_YEAR.rds"
     -   "nonfao_wheat_YEAR.rds"
     -   "nonfao_maize_YEAR.rds"
 
--   `Final_Output/` folder contains three final CSV files that merge FAO
+-   `Final_Output/` folder should eventually contain three final CSV files that merge FAO
     and non-FAO data for each grain
 
     -   "wheat_YEAR.csv"
@@ -40,18 +41,26 @@ Follow the instructions in the "FFI Annual Report Data Compilation" SOP
     report) so file names can be customized to the current annual
     report's year
 
+- The renv.lock, .Rprofile, and renv folder contain information about the R packages and dependencies used in this project.
+  They can help you sync your project's R packages on your local computer.
+  
 # Code Description
 
 -   `Code/clean_fao_data.R`:
     -   clean FAO SUA and Food Balances data from `Raw_Data/` folder
+    -   save cleaned data files in `Cleaned_Data/` folder
 -   `Code/clean_nonfao_data.R`:
     -   clean non-FAO data from `Raw_Data/` folder
+    -   save cleaned data files in `Cleaned_Data/` folder
 -   `Code/wheat.R`:
     -   read in and compile FAO and non-FAO data for wheat
-    -   save wheat trade sheet in `Final_Output/` folder
+    -   save wheat sheet in `Final_Output/` folder
 -   `Code/maize.R`:
-    -   read in and compile FAO and non-FAO data for wheat
-    -   save maize trade sheet in `Final_Output/` folder
+    -   read in and compile FAO and non-FAO data for maize
+    -   save maize sheet in `Final_Output/` folder
 -   `Code/rice.R`:
     -   read in and compile FAO and non-FAO data for rice
-    -   save rice trade sheet in `Final_Output/` folder
+    -   save rice sheet in `Final_Output/` folder
+-   `Code/opportunity_exclusion.R`:
+    -   read in and compile wheat, maize, and rice sheets and calculate opportunity exclusion
+    -   save opportunity exclusion sheet in `Final_Output/` folder
