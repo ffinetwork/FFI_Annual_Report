@@ -1,6 +1,6 @@
 # Prep
 
-Follow the instructions in the "FFI Annual Report Data Compilation" SOP
+Follow the instructions in the "FFI Annual Report Data Compilation in R" SOP
 
 # Project Directory Description
 
