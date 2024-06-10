@@ -37,9 +37,9 @@ Follow the instructions in the "FFI Annual Report Data Compilation in R" SOP
 
 -   `config.yml` is a document that specifies a parameter or variable
     that we don't want hard-coded into any of the code since it can
-    change. It contains one parameter (the year of the current annual
-    report) so file names can be customized to the current annual
-    report's year
+    change. It contains two parameters (the year of the current annual
+    report and the year of the sources) so file names can be customized to the current annual
+    report's year.
   
 # Code Description
 
